@@ -7,7 +7,7 @@ import logo from "../../assets/logo.png";
 const navLinks = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "Team", href: "/" },
+  { title: "Team", href: "/team" },
   { title: "BTS", href: "/" },
   { title: "Trailer", href: "/" },
   { title: "Donations", href: "/" },

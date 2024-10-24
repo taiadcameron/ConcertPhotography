@@ -1,7 +1,7 @@
 import img2 from "../../assets/img2.jpg";
 import triangle from "../../assets/triangle.svg";
 
-function hero() {
+function Hero() {
   return (
     <div className="h-fit w-full flex mb-56 pt-28 lg:px-32 md:px-12 flex-col md:flex-row px-4 ">
       <div className=" w-full  pt-12 mb-8">
@@ -29,4 +29,4 @@ function hero() {
   );
 }
 
-export default hero;
+export default Hero;
