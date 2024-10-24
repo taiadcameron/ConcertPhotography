@@ -1,13 +1,15 @@
-import Hero from "./components/hero";
-import Nav from "./components/nav";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Index from "./pages/index";
+import About from "./pages/about";
 
 function App() {
   return (
-    <>
-      <Nav />
-      <Hero />
-      <div className="h-60 bg-slate-800"></div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   );
 }
 

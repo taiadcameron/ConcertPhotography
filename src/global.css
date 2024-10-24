@@ -18,7 +18,7 @@
     --h4-font-size: calc(1.25rem + 1vw);
     --h5-font-size: calc(1.125rem + 0.5vw);
     --h6-font-size: calc(1rem + 0.25vw);
-    --p-font-size: calc(0.875rem + 0.5vw);
+    --p-font-size: calc(0.675rem + 0.5vw);
   }
 }
 
@@ -38,17 +38,17 @@ h1 {
 }
 
 h2 {
-  @apply font-semibold text-butterscotch;
+  @apply font-semibold text-white-smoke;
   font-size: var(--h2-font-size);
 }
 
 h3 {
-  @apply font-medium text-amethyst;
+  @apply font-medium text-white-smoke;
   font-size: var(--h3-font-size);
 }
 
 h4 {
-  @apply font-medium text-white-smoke;
+  @apply font-medium text-butterscotch;
   font-size: var(--h4-font-size);
 }
 
