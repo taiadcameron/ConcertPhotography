@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Index from "./pages/Index";
-import About from "./pages/About";
-import Team from "./pages/Team";
-import Contact from "./pages/contact";
-import Gallery from "./pages/Gallery";
-import BTS from "./pages/BTS";
+import Index from "@/pages/IndexPage";
+import About from "./pages/AboutPage.jsx";
+import Team from "./pages/Team.jsx";
+import Contact from "./pages/contact.jsx";
+import Gallery from "./pages/Gallery.jsx";
+import BTS from "./pages/BTS.jsx";
 import Blog from "./pages/Blog";
-import ScrollToTop from "./components/shared/scrollTop";
+import ScrollToTop from "./components/shared/scrollTop.jsx";
 
 function App() {
   return (
