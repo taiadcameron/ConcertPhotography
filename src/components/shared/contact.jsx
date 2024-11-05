@@ -48,16 +48,19 @@ function Contact() {
                 className="text-white-smoke w-full p-2 bg-transparent border-b  focus:outline-none focus:border-butterscotch"
               ></textarea>
             </div>
+
             <Button text="Send Message" />
           </form>
           <div className="md:w-1/2 flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <h3 className=" font-semibold">Feeling Nice?</h3>
-              <p>Donate to the team here</p>
+              <p className="text-butterscotch">Donate to the team here</p>
               <Button text="Donate" />
             </div>
             <div className="flex flex-col gap-4">
-              <p>Or sign up for our newsletter! </p>
+              <p className="text-butterscotch">
+                Or sign up for our newsletter!{" "}
+              </p>
               <form className="space-y-4">
                 <div>
                   <input

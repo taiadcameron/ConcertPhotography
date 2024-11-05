@@ -1,19 +1,17 @@
 import PropTypes from "prop-types";
 
-function Button({ text, onClick }) {
+function BlogBtn({ text, onClick }) {
   return (
     <button
       onClick={onClick}
-      className="border-white-smoke border px-4 py-2 text-white-smoke hover:bg-purple-900"
+      className="border-night border px-4 py-8 text-white-smoke bg-night  hover:bg-purple-900 w-full"
     >
       {text}
     </button>
   );
 }
-
-Button.propTypes = {
+BlogBtn.propTypes = {
   text: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
-
-export default Button;
+export default BlogBtn;

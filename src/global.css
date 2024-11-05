@@ -66,3 +66,14 @@ p {
   @apply text-white-smoke leading-relaxed;
   font-size: var(--p-font-size);
 }
+.shape-outside-circle {
+  shape-outside: circle(50%);
+}
+
+.shape-outside-polygon {
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+}
+
+.text-shaddow {
+  text-shadow: #666666 4px 4px;
+}

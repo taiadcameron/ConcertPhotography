@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   motion,
   useScroll,
@@ -42,7 +42,7 @@ function TeamScroll() {
   ];
 
   // Define trigger points
-  const triggerPoints = [800, 1100, 1400, 1700, 2000];
+  const triggerPoints = [700, 1050, 1350, 1700, 2000];
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (
@@ -134,7 +134,7 @@ function TeamScroll() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{ delay: 0.4, duration: 0.5 }}
+                transition={{ delay: 0.2, duration: 0.4 }}
                 className="basis-1/4"
               >
                 <img
@@ -153,7 +153,7 @@ function TeamScroll() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                transition={{ delay: 0.6, duration: 0.5 }}
+                transition={{ delay: 0.3, duration: 0.4 }}
                 className="basis-1/4 flex items-end"
               >
                 <p>{teamMembers[currentIndex].text}</p>
