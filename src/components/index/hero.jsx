@@ -52,10 +52,7 @@ function Hero() {
         </motion.p>
         <motion.h1 className="leading-none">Concert Photography</motion.h1>
       </motion.div>
-      <motion.div
-        className="w-full flex flex-col justify-center gap-2"
-        variants={itemVariants}
-      >
+      <motion.div className="w-full flex flex-col justify-center gap-2">
         <motion.div
           className="border-white-smoke border-2 p-4"
           variants={itemVariants}

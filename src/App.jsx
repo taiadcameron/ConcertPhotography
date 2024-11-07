@@ -6,6 +6,7 @@ import Contact from "@/pages/ContactPage";
 import Gallery from "@/pages/GalleryPage";
 import BTS from "@/pages/BTSPage";
 import Blog from "@/pages/BlogPage";
+import Article1 from "@/pages/BlogArticles/A1";
 import ScrollToTop from "./components/shared/scrollTop";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/Behind-The-Scenes" element={<BTS />} />
         <Route path="/Blog" element={<Blog />} />
+        <Route path="/Article1" element={<Article1 />} />
       </Routes>
     </Router>
   );

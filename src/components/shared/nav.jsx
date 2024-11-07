@@ -13,6 +13,7 @@ const navLinks = [
   { title: "Gallery", href: "/gallery" },
   { title: "Contact", href: "/contact" },
   { title: "Donations", href: "/" },
+  { title: "Blog", href: "/blog" },
 ];
 
 //animations
@@ -92,7 +93,7 @@ const NavLink = ({ title, href, toggleMenu }) => {
     >
       <a
         href={href}
-        className="text-6xl uppercase font-semibold"
+        className="text-4xl md:text-6xl uppercase font-semibold"
         onClick={handleClick}
       >
         {title}
@@ -105,7 +106,6 @@ const NavLink = ({ title, href, toggleMenu }) => {
 const Nav = () => {
   const [open, setOpen] = useState(false);
 
-  //NEED EXPLAINNNG
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
   };
