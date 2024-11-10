@@ -166,7 +166,7 @@
 
 // export default Contact;
 
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 function Contact() {
@@ -176,10 +176,6 @@ function Contact() {
     message: "",
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -187,7 +183,8 @@ function Contact() {
       alert(response.data.message);
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      alert("Error submitting form");
+      console.error("Error submitting form:", error); // Log the error
+      alert("Error submitting form: " + error.message);
     }
   };
 
