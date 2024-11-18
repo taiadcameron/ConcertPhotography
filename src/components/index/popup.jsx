@@ -21,7 +21,7 @@ const TimedPopup = () => {
   const NewsletterSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/createNLEmail", { name, email })
+      .post(`${API_URL}/createNLEmail`, { name, email })
       .then((response) => {
         console.log(response.data);
         setName("");

@@ -8,11 +8,12 @@ import img3 from "../../assets/imgs/galimg (6).jpeg";
 export function Hero() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const API_URL = process.env.API_URL || "http://localhost:3000";
 
   const NewsletterSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/createNLEmail", { name, email })
+      .post(`${API_URL}/createNLEmail`, { name, email })
       .then((response) => {
         console.log(response.data);
         setName("");

@@ -5,7 +5,11 @@ const mongoose = require("mongoose");
 const NewsletterModel = require("./models/NewsletterModel");
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.FRONTEND_URL || "http://localhost:3000",
+  })
+);
 app.use(express.json());
 
 // MongoDB connection with error handling
