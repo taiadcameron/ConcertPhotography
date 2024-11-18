@@ -76,7 +76,11 @@ function Hero() {
             whileHover={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
           >
-            <motion.div className="bg-black bg-opacity-50 px-6 py-3 cursor-pointer">
+            <motion.div
+              className="bg-black bg-opacity-50 px-6 py-3 cursor-pointer"
+              onHoverStart={() => setIsHovered(true)}
+              onHoverEnd={() => setIsHovered(false)}
+            >
               <span className="text-white text-lg font-semibold">
                 Watch Trailer
               </span>
