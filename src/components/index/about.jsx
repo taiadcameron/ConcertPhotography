@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
-import img2 from "../../assets/img2.jpg";
+import aboutImg from "../../assets/imgs/aboutimg.jpeg";
 import Button from "../shared/button";
 
 function About() {
@@ -58,7 +58,7 @@ function About() {
             className="row-start-2 md:row-span-2 p-3 pl-0 md:row-start-2 border-t border-l md:border-l-0 "
             variants={itemVariants}
           >
-            <img src={img2} alt="" className=" " />
+            <img src={aboutImg} alt="artist on stage" />
           </motion.div>
           <motion.div
             className="border-b border-l row-start-4 col-span-4 md:col-span-2 md:row-span-1 md:row-start-2"
@@ -81,7 +81,7 @@ function About() {
             className="col-start-2 row-start-5 md:col-start-4 md:row-start-3 w-fit h-fit p-2 border-b border-l"
             variants={itemVariants}
           >
-            <Button text="Learn More" />
+            <Button text="Learn More" to="/about" />
           </motion.div>
         </div>
       </motion.div>

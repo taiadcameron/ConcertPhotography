@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
-import img2 from "../../assets/img2.jpg";
+import img2 from "../../assets/imgs/galimg (9).jpeg";
 import Button from "../shared/button";
 
 export function Team() {
@@ -65,12 +65,12 @@ export function Team() {
             vision.
           </motion.p>
           <motion.div variants={itemVariants}>
-            <Button text="View The Team" />
+            <Button text="View The Team" to="/team" />
           </motion.div>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="h-full basis-1/3">
-          <img src={img2} alt="" className="h-full" />
+        <motion.div variants={itemVariants} className="h-full  basis-1/3">
+          <img src={img2} alt="" className="" />
         </motion.div>
       </div>
     </motion.div>

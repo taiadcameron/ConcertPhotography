@@ -15,7 +15,7 @@ const BlogPost = () => {
             initial: { opacity: 0, y: 20 },
             in: { opacity: 1, y: 0 },
           }}
-          className="bg-white-smoke text-night pt-24 pb-16"
+          className="bg-white-smoke text-night pt-20 pb-16"
         >
           <div className="mx-auto px-4 max-w-3xl">
             <header className="mb-4">
@@ -37,7 +37,7 @@ const BlogPost = () => {
 
             <article className="   text-night">
               <h2 className="text-night">First Section Header</h2>
-              <p className="text-night">
+              <p className="text-night mb-8">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
                 in dui mauris. Vivamus hendrerit arcu sed erat molestie
                 vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh
@@ -47,7 +47,7 @@ const BlogPost = () => {
               </p>
 
               <h2 className="text-night">Second Section Header</h2>
-              <p className="text-night">
+              <p className="text-night mb-8">
                 Maecenas faucibus mollis interdum. Donec sed odio dui. Cras
                 justo odio, dapibus ac facilisis in, egestas eget quam.
                 Vestibulum id ligula porta felis euismod semper. Donec id elit
@@ -56,7 +56,7 @@ const BlogPost = () => {
               </p>
 
               <h2 className="text-night">Third Section Header</h2>
-              <p className="text-night">
+              <p className="text-night mb-8">
                 Cum sociis natoque penatibus et magnis dis parturient montes,
                 nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare
                 sem lacinia quam venenatis vestibulum. Sed posuere consectetur
@@ -65,7 +65,7 @@ const BlogPost = () => {
               </p>
 
               <h3 className="text-night">Subsection Header</h3>
-              <p className="text-night">
+              <p className="text-night mb-8">
                 Nullam quis risus eget urna mollis ornare vel eu leo. Cras
                 mattis consectetur purus sit amet fermentum. Duis mollis, est
                 non commodo luctus, nisi erat porttitor ligula, eget lacinia
@@ -74,7 +74,7 @@ const BlogPost = () => {
               </p>
 
               <h2 className="text-night">Conclusion</h2>
-              <p className="text-night">
+              <p className="text-night mb-8 ">
                 Cras justo odio, dapibus ac facilisis in, egestas eget quam.
                 Donec id elit non mi porta gravida at eget metus. Nullam id
                 dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque

@@ -5,7 +5,7 @@ const navLinks = [
   { title: "About", href: "/about" },
   { title: "Team", href: "/team" },
   { title: "BTS", href: "/behind-the-scenes" },
-  { title: "Trailer", href: "/" },
+  { title: "Blog", href: "/blog" },
   { title: "Gallery", href: "/gallery" },
   { title: "Contact", href: "/contact" },
   { title: "Donations", href: "/" },

@@ -1,11 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import img2 from "../../assets/img2.jpg";
+import heroImg from "../../assets/imgs/trailerimg.jpeg";
 import triangle from "../../assets/triangle.svg";
 
 function Hero() {
   const controls = useAnimation();
-  //animations
+  const [isHovered, setIsHovered] = useState(false);
+
   useEffect(() => {
     controls.start("visible");
   }, [controls]);
@@ -32,9 +33,14 @@ function Hero() {
     },
   };
 
+  const underlineVariants = {
+    hidden: { width: "0%" },
+    visible: { width: "100%" },
+  };
+
   return (
     <motion.div
-      className="h-screen w-full flex  pt-28 lg:px-32 md:px-12 flex-col md:flex-row px-4"
+      className="selection:text-butterscotch h-screen w-full flex pt-12 md:pt-28 lg:px-32 md:px-12 flex-col md:flex-row px-4"
       variants={containerVariants}
       initial="hidden"
       animate={controls}
@@ -50,14 +56,39 @@ function Hero() {
             Feel the music.
           </motion.span>
         </motion.p>
-        <motion.h1 className="leading-none">Concert Photography</motion.h1>
+        <motion.h1 className="leading-none">
+          Music Through <br /> The Lens
+        </motion.h1>
       </motion.div>
       <motion.div className="w-full flex flex-col justify-center gap-2">
         <motion.div
-          className="border-white-smoke border-2 p-4"
+          className="border-white-smoke border-2 p-4 relative"
           variants={itemVariants}
         >
-          <img src={img2} alt="" className="w-full h-auto" />
+          <img
+            src={heroImg}
+            alt="Artist on stage performing"
+            className="w-full h-auto"
+          />
+          <motion.div
+            className="absolute inset-0 flex items-center justify-center"
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.div className="bg-black bg-opacity-50 px-6 py-3 cursor-pointer">
+              <span className="text-white text-lg font-semibold">
+                Watch Trailer
+              </span>
+              <motion.div
+                className="h-0.5 bg-white mt-1"
+                variants={underlineVariants}
+                initial="hidden"
+                animate={isHovered ? "visible" : "hidden"}
+                transition={{ duration: 0.3 }}
+              />
+            </motion.div>
+          </motion.div>
         </motion.div>
         <motion.div variants={itemVariants}>
           <motion.p

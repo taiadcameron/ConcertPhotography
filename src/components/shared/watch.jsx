@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
-import img2 from "../../assets/img2.jpg";
+import watchImg from "../../assets/imgs/watchImg.jpeg";
 import Button from "../shared/button";
 
 function Watch() {
@@ -45,7 +45,7 @@ function Watch() {
         className="basis-2/3  flex flex-col gap-2"
         variants={itemVariants}
       >
-        <motion.img src={img2} alt="" variants={itemVariants} />
+        <motion.img src={watchImg} alt="" variants={itemVariants} />
       </motion.div>
 
       <motion.div
@@ -68,7 +68,7 @@ function Watch() {
           but 35mm cameras and their artistic vision.
         </motion.p>
         <motion.div className="border-l p-2" variants={itemVariants}>
-          <Button text="Learn More" />
+          <Button text="Watch Now!" />
         </motion.div>
       </motion.div>
     </motion.div>

@@ -93,16 +93,23 @@ const BTSGal = () => {
         </motion.div>
 
         <div className="flex justify-between md:mx-24 mt-4">
-          <Button
+          <button
+            className="border-white-smoke border px-4 py-2 text-white-smoke hover:bg-purple-900"
             text="Previous Image"
             onClick={prevImage}
             disabled={currentIndex === 0}
-          />
-          <Button
+          >
+            Previous Image
+          </button>
+
+          <button
+            className="border-white-smoke border px-4 py-2 text-white-smoke hover:bg-purple-900"
             text="Next Image"
             onClick={nextImage}
             disabled={currentIndex === images.length - 1}
-          />
+          >
+            Next Image
+          </button>
         </div>
       </div>
     </div>

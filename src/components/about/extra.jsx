@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Button from "../../components/shared/button";
+import galImg from "../../assets/imgs/galImg 1.svg";
 import img1 from "../../assets/img1.jpg";
 
 function Extra() {
@@ -9,26 +10,17 @@ function Extra() {
         <div className="flex flex-col ">
           <p className="text-amethyst text-base">Summer, 2023</p>
           <img src={img1} alt="" />
-          <p>
-            Summer crouches at the stage's edge, camera aimed upward. Her
-            all-black outfit and focused expression blend with the venue's dim
-            lighting, while her "All Access" pass hints at the world she's
-            capturing through her lens.
-          </p>
+
           <div className="mt-4">
-            <Button text="View BTS" />
+            <Button text="View BTS" to="/behind-the-scenes" />
           </div>
         </div>
-        <div className="flex flex-col pl-28">
+        <div className="flex flex-col ">
           <p className="text-amethyst text-base">2023</p>
-          <img src={img1} alt="" />
-          <p>
-            A guitarist, backlit and leaning into a solo, is frozen in Summer's
-            frame. His silhouette stands stark against a burst of stage light,
-            strings visibly vibrating as the crowd reaches toward him.
-          </p>
+          <img src={galImg} alt="artist on stage with light glare" />
+
           <div className="mt-4">
-            <Button text="View Gallery" />
+            <Button text="View Gallery" to="/gallery" />
           </div>
         </div>
       </div>

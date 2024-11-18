@@ -14,37 +14,40 @@ function TeamScroll() {
   const [isVisible, setIsVisible] = useState(false);
   const [progress, setProgress] = useState(0);
 
+  //team
   const teamMembers = [
     {
-      job: "Director",
-      name: "Anna",
+      job: "Director, DoP",
+      name: "Katie Barnes",
       image: img1,
-      text: "Anna is our visionary director, bringing stories to life with her unique perspective and creative flair.",
+      text: "Kate's media journey began in secondary school, inspired by K-pop music videos' unique visual style. This fascination with creative storytelling naturally led her to pursue film and television studies.",
+    },
+    {
+      job: "Director, Editor",
+      name: "Léa Fabiola",
+      image: img2,
+      text: "Raised by a film enthusiast father who always had a camera at the ready, Léa's obsession with movies and the film industry blossomed early. This childhood immersion in cinema shaped her creative journey, fueling her passion for filmmaking.",
+    },
+    {
+      job: "1st Aid",
+      name: "Ella",
+      image: img1,
+      text: "Ella's expertise in first aid ensures the safety of our crew and talent on set. Her quick thinking and calm demeanor are invaluable assets during intense shooting schedules.",
     },
     {
       job: "Producer",
-      name: "Kate",
+      name: "Luca",
       image: img2,
-      text: "Kate, our talented producer, ensures every project runs smoothly from concept to completion.",
-    },
-    {
-      job: "Editor",
-      name: "Emma",
-      image: img1,
-      text: "Emma's keen eye for detail makes her an exceptional editor, crafting seamless narratives from raw footage.",
-    },
-    {
-      job: "Sound Designer",
-      name: "Alex",
-      image: img2,
-      text: "Alex, our sound design wizard, creates immersive audio landscapes that elevate every production.",
+      text: "Luca's organizational skills and creative vision make him an exceptional producer. He seamlessly coordinates all aspects of production, ensuring that our projects run smoothly from concept to completion.",
     },
   ];
 
-  // Define trigger points
+  // scroll trigger points
   const triggerPoints = [700, 1050, 1350, 1700, 2000];
 
+  //scroll position change eventlistener
   useMotionValueEvent(scrollY, "change", (latest) => {
+    //determines what team member based on scroll position
     if (
       latest < triggerPoints[0] ||
       latest >= triggerPoints[triggerPoints.length - 1]
@@ -57,11 +60,10 @@ function TeamScroll() {
       let newIndex = triggerPoints.findIndex(
         (point, i) => latest >= point && latest < triggerPoints[i + 1]
       );
-      // Ensure the index is within bounds
       newIndex = Math.min(newIndex, teamMembers.length - 1);
       setCurrentIndex(newIndex);
 
-      // Calculate progress
+      // calculates loading bar progress
       const sectionStart = triggerPoints[0];
       const sectionEnd = triggerPoints[triggerPoints.length - 1];
       const currentProgress =
@@ -89,13 +91,15 @@ function TeamScroll() {
         style={{ scaleX: progress, transformOrigin: "0%" }}
       />
 
+      {/* main content container */}
       <motion.div
-        className="fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-full"
+        className="fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-45%] w-full"
         variants={contentVariants}
         initial="hidden"
         animate={isVisible ? "visible" : "hidden"}
       >
         <motion.div className="flex flex-col px-4 md:px-0 md:flex-row gap-12 justify-center">
+          {/* job and name */}
           <div className="flex flex-col">
             <AnimatePresence mode="wait">
               {currentIndex !== undefined && (
@@ -107,7 +111,7 @@ function TeamScroll() {
                     animate="center"
                     exit="exit"
                     transition={{ duration: 0.5 }}
-                    className="w-36 z-10"
+                    className="w-64 z-10"
                   >
                     {teamMembers[currentIndex].job}
                   </motion.h2>
@@ -126,6 +130,8 @@ function TeamScroll() {
               )}
             </AnimatePresence>
           </div>
+
+          {/* Team image */}
           <AnimatePresence mode="wait">
             {currentIndex !== undefined && (
               <motion.div
@@ -145,6 +151,7 @@ function TeamScroll() {
               </motion.div>
             )}
           </AnimatePresence>
+          {/* description */}
           <AnimatePresence mode="wait">
             {currentIndex !== undefined && (
               <motion.div

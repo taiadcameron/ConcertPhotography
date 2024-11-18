@@ -9,7 +9,6 @@ const navLinks = [
   { title: "About", href: "/about" },
   { title: "Team", href: "/team" },
   { title: "BTS", href: "/behind-the-scenes" },
-  { title: "Trailer", href: "/" },
   { title: "Gallery", href: "/gallery" },
   { title: "Contact", href: "/contact" },
   { title: "Donations", href: "/" },
@@ -133,7 +132,9 @@ const Nav = () => {
         <div className="flex items-center gap-4">
           {" "}
           <p className="text-lg cursor-pointer">Watch Now</p>
-          <img src={logo} alt="logo" className="h-16" />
+          <a href="/">
+            <img src={logo} alt="logo" className="h-16" />
+          </a>
         </div>
       </motion.nav>
       {"Nav menu"}

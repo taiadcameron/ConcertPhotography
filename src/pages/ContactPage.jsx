@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <>
       <Nav />
-      <main className="lg:mx-32 md:mx-12 mx-4">
+      <main className="lg:mx-32 md:mx-12 mx-4 pt-24">
         <ContactForm />
       </main>
       <Footer />

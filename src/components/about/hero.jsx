@@ -1,9 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import Button from "../shared/button";
-import { motion } from "framer-motion";
 import img2 from "../../assets/img1.jpg";
-
+import { motion, useScroll, useTransform } from "framer-motion";
 function Hero() {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], [0, -150]);
+
   // Animation variants for text elements
   const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -18,7 +20,8 @@ function Hero() {
   };
 
   return (
-    <div className="h-fit w-full flex flex-col gap-8 mb-8 pt-28">
+    <div className="h-fit w-full flex flex-col gap-8 mb-8 pt-20 ">
+      {" "}
       <motion.div
         initial="hidden"
         animate="visible"
@@ -45,7 +48,6 @@ function Hero() {
           Featuring Summer
         </motion.p>
       </motion.div>
-
       <motion.div
         className="flex flex-col gap-4 md:flex-row justify-between"
         initial={{ opacity: 0 }}
@@ -73,7 +75,6 @@ function Hero() {
           <Button text="Watch Now!" />
         </motion.div>
       </motion.div>
-
       <motion.div
         className="lg:h-[800px] overflow-hidden relative"
         initial={{ y: 200, opacity: 0 }}
@@ -83,7 +84,7 @@ function Hero() {
           opacity: { delay: 0.7 },
         }}
       >
-        <motion.div className="inset-0">
+        <motion.div className="inset-0" style={{ y }}>
           <motion.img
             src={img2}
             alt=""

@@ -2,13 +2,13 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import image1 from "../../assets/img1.jpg";
-import image3 from "../../assets/img1.jpg";
-import image2 from "../../assets/img2.jpg";
-import image4 from "../../assets/img2.jpg";
+import scrollImg1 from "../../assets/imgs/scrollImg1.jpeg";
+import scrollImg2 from "../../assets/imgs/scrollImg2.jpeg";
+import scrollImg3 from "../../assets/imgs/scrollImg3.jpeg";
+import scrollImg4 from "../../assets/imgs/scrollImg4.jpeg";
 
 // img array and angles
-const images = [image1, image2, image3, image4];
+const images = [scrollImg1, scrollImg2, scrollImg3, scrollImg4];
 const angles = [-5, 5, -5, 5];
 
 const ImageComponent = ({ src, index, totalImages }) => {
@@ -16,8 +16,8 @@ const ImageComponent = ({ src, index, totalImages }) => {
   const { scrollYProgress } = useScroll();
 
   // animation start and end points
-  const start = index / (totalImages + 2);
-  const end = (index + 1) / (totalImages + 2);
+  const start = index / (totalImages + 1);
+  const end = (index + 0.8) / (totalImages + 1);
 
   // Sets animations based on scroll
   const y = useTransform(scrollYProgress, [start, end], ["100%", "0%"]);
@@ -41,7 +41,7 @@ const ImageComponent = ({ src, index, totalImages }) => {
     >
       <img
         src={src}
-        alt={`Image ${index + 1}`}
+        alt={index + 1}
         className="w-full h-full object-cover rounded-lg shadow-lg"
       />
       {/* Adds a link to gallery for last image */}
