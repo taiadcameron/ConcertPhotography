@@ -1,26 +1,26 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, ArrowLeft } from "lucide-react";
-import img1 from "../../assets/imgs/galimg (1).jpeg";
-import img2 from "../../assets/imgs/galimg (2).jpeg";
-import img3 from "../../assets/imgs/galimg (3).jpeg";
-import img4 from "../../assets/imgs/galimg (4).jpeg";
-import img5 from "../../assets/imgs/galimg (5).jpeg";
-import img6 from "../../assets/imgs/galimg (6).jpeg";
-import img7 from "../../assets/imgs/galimg (7).jpeg";
-import img8 from "../../assets/imgs/galimg (8).jpeg";
-import img9 from "../../assets/imgs/galimg (9).jpeg";
-import img10 from "../../assets/imgs/galimg (10).jpeg";
-import img11 from "../../assets/imgs/galimg (11).jpeg";
-import img12 from "../../assets/imgs/galimg (12).jpeg";
-import img13 from "../../assets/imgs/galimg (13).jpeg";
-import img14 from "../../assets/imgs/galimg (14).jpeg";
-import img15 from "../../assets/imgs/galimg (15).jpeg";
-import img16 from "../../assets/imgs/galimg (16).jpeg";
-import img17 from "../../assets/imgs/galimg (17).jpeg";
-import img18 from "../../assets/imgs/galimg (18).jpeg";
-import img19 from "../../assets/imgs/galimg (19).jpeg";
-import img20 from "../../assets/imgs/galimg (20).jpeg";
+import img1 from "../../assets/imgs/galimg (1).webp";
+import img2 from "../../assets/imgs/galimg (2).webp";
+import img3 from "../../assets/imgs/galimg (3).webp";
+import img4 from "../../assets/imgs/galimg (4).webp";
+import img5 from "../../assets/imgs/galimg (5).webp";
+import img6 from "../../assets/imgs/galimg (6).webp";
+import img7 from "../../assets/imgs/galimg (7).webp";
+import img8 from "../../assets/imgs/galimg (8).webp";
+import img9 from "../../assets/imgs/galimg (8).webp";
+import img10 from "../../assets/imgs/galimg (10).webp";
+import img11 from "../../assets/imgs/galimg (11).webp";
+import img12 from "../../assets/imgs/galimg (12).webp";
+import img13 from "../../assets/imgs/galimg (8).webp";
+import img14 from "../../assets/imgs/galimg (14).webp";
+import img15 from "../../assets/imgs/galimg (8).webp";
+import img16 from "../../assets/imgs/galimg (8).webp";
+import img17 from "../../assets/imgs/galimg (17).webp";
+import img18 from "../../assets/imgs/galimg (18).webp";
+import img19 from "../../assets/imgs/galimg (19).webp";
+import img20 from "../../assets/imgs/galimg (20).webp";
 
 const images = [
   {

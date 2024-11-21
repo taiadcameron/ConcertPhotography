@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import heroImg from "../../assets/imgs/trailerimg.jpeg";
-import triangle from "../../assets/triangle.svg";
+import heroImg from "../../assets/imgs/trailerimg.webp";
+import triangle from "../../assets/imgs/triangle.svg";
 
 function Hero() {
   const controls = useAnimation();
@@ -65,25 +65,16 @@ function Hero() {
           className="border-white-smoke border-2 p-4 relative"
           variants={itemVariants}
         >
-          <img
-            src={heroImg}
-            alt="Artist on stage performing"
-            className="w-full h-auto"
-          />
-          <motion.div
-            className="absolute inset-0 flex items-center justify-center"
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-          >
+          <img src={heroImg} alt="Artist on stage performing" className="" />
+          <motion.div className="absolute inset-0 flex items-center justify-center">
             <motion.div
-              className="bg-black bg-opacity-50 px-6 py-3 cursor-pointer"
+              className=" px-6 py-3 cursor-pointer"
               onHoverStart={() => setIsHovered(true)}
               onHoverEnd={() => setIsHovered(false)}
             >
-              <span className="text-white text-lg font-semibold">
+              <div className="text-white text-lg font-semibold">
                 Watch Trailer
-              </span>
+              </div>
               <motion.div
                 className="h-0.5 bg-white mt-1"
                 variants={underlineVariants}
@@ -107,7 +98,7 @@ function Hero() {
           >
             <motion.img
               src={triangle}
-              alt=""
+              alt="triangle"
               className=""
               animate={{ y: [0, 5, 0] }}
               transition={{
@@ -118,7 +109,7 @@ function Hero() {
             />
             <motion.img
               src={triangle}
-              alt=""
+              alt="triangle"
               className=""
               animate={{ y: [0, 5, 0] }}
               transition={{

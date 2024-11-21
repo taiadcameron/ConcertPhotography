@@ -5,8 +5,8 @@ import {
   useMotionValueEvent,
   AnimatePresence,
 } from "framer-motion";
-import img1 from "../../assets/img1.jpg";
-import img2 from "../../assets/img2.jpg";
+import img1 from "../../assets/imgs/galimg (1).webp";
+import img2 from "../../assets/imgs/galimg (1).webp";
 
 function TeamScroll() {
   const { scrollY } = useScroll();
@@ -21,24 +21,28 @@ function TeamScroll() {
       name: "Katie Barnes",
       image: img1,
       text: "Kate's media journey began in secondary school, inspired by K-pop music videos' unique visual style. This fascination with creative storytelling naturally led her to pursue film and television studies.",
+      alt: "picture of kate",
     },
     {
       job: "Director, Editor",
       name: "Léa Fabiola",
       image: img2,
       text: "Raised by a film enthusiast father who always had a camera at the ready, Léa's obsession with movies and the film industry blossomed early. This childhood immersion in cinema shaped her creative journey, fueling her passion for filmmaking.",
+      alt: "picture of Léa",
     },
     {
       job: "1st Aid",
       name: "Ella",
       image: img1,
       text: "Ella's expertise in first aid ensures the safety of our crew and talent on set. Her quick thinking and calm demeanor are invaluable assets during intense shooting schedules.",
+      alt: "picture of Ella",
     },
     {
       job: "Producer",
       name: "Luca",
       image: img2,
       text: "Luca's organizational skills and creative vision make him an exceptional producer. He seamlessly coordinates all aspects of production, ensuring that our projects run smoothly from concept to completion.",
+      alt: "picture of Luca",
     },
   ];
 

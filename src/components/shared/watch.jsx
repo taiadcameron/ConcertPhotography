@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
-import watchImg from "../../assets/imgs/watchImg.jpeg";
+import watchImg from "../../assets/imgs/watchImg.webp";
 import Button from "../shared/button";
 
 function Watch() {
@@ -45,7 +45,11 @@ function Watch() {
         className="basis-2/3  flex flex-col gap-2"
         variants={itemVariants}
       >
-        <motion.img src={watchImg} alt="" variants={itemVariants} />
+        <motion.img
+          src={watchImg}
+          alt="singer on stage preforming"
+          variants={itemVariants}
+        />
       </motion.div>
 
       <motion.div

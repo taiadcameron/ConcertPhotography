@@ -2,6 +2,8 @@ import Button from "./button";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
 function Contact() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -10,7 +12,7 @@ function Contact() {
   const ContactSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/createMessage", { name, email, mes })
+      .post(`${API_URL}/createMessage`, { name, email, mes })
       .then((response) => {
         console.log(response.data);
         setName("");
@@ -23,7 +25,7 @@ function Contact() {
   const NewsletterSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/createNLEmail", { name, email })
+      .post(`${API_URL}/createNLEmail`, { name, email })
       .then((response) => {
         console.log(response.data);
         setName("");

@@ -7,6 +7,8 @@ const TimedPopup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
 
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);

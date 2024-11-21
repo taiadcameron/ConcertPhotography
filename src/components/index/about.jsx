@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
-import aboutImg from "../../assets/imgs/aboutimg.jpeg";
+import aboutImg from "../../assets/imgs/aboutimg.webp";
 import Button from "../shared/button";
 
 function About() {
@@ -49,7 +49,7 @@ function About() {
           >
             <h2 className="leading-none">
               <span className="text-butterscotch">
-                Capturing the Beat: <br />
+                Capturing the Beat <br />
               </span>
               A Lens on Concert Photography
             </h2>
@@ -65,16 +65,19 @@ function About() {
             variants={itemVariants}
           >
             <p className="text-base mb-4 p-2">
-              Analog Nights dives into the thrilling world of concert
-              photography. Follow three photographers capturing live music
-              moments on film, from packed venues to backstage drama. This
-              15-minute documentary celebrates the art of freezing musical
-              performances in time, showcasing the passion and challenges behind
-              each shot.
-              <br />
-              <br />
-              Directed by Emma Reeves, it a tribute to music and photography,
-              revealing how a single image can capture an entire shows essence.
+              Following Summer, a passionate but struggling photographer, as she
+              navigates the electrifying world of concert photography. From dive
+              bars to sold-out arenas, Summer's journey captures the raw energy
+              of live music and the relentless pursuit of that perfect shot. As
+              she battles low light, restrictive contracts, and fierce
+              competition, Summer discovers that her greatest challenge isn't
+              just capturing the artists on stage, but finding her own voice in
+              a sea of flashing lights. <br />
+              <br /> This documentary offers an intimate look at the highs and
+              lows of a career behind the camera, revealing the dedication,
+              creativity, and resilience required to make it in the fast-paced
+              world of music photography. Through Summer's lens, we see not just
+              the stars on stage, but the rising talent behind the viewfinder
             </p>
           </motion.div>
           <motion.div

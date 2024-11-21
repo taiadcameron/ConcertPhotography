@@ -1,5 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import img1 from "../../assets/img1.jpg";
+import img1 from "../../assets/imgs/galimg (1).webp";
 
 export function Hero() {
   const { scrollYProgress } = useScroll();
@@ -40,10 +40,14 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quod
-          soluta architecto? Minus perspiciatis distinctio ipsam molestiae.
-          Velit officia voluptatum illo quibusdam? Laudantium modi totam aliquid
-          mollitia blanditiis incidunt iure.
+          Behind every captivating concert photograph is a dedicated team of
+          visionaries. Our collective passion for music and imagery drives us to
+          freeze moments of pure artistic expression. From the thunderous beats
+          to the dazzling lights, we're there to capture it all. Meet the faces
+          behind the lenses, the storytellers who bring you closer to the heart
+          of live music. Together, we're not just documenting performances;
+          we're preserving the raw energy and emotion that make each show
+          unforgettable.
         </motion.p>
       </motion.div>
       <motion.div
@@ -56,7 +60,7 @@ export function Hero() {
           style={{ scale, y }}
           className="lg:right-0 lg:origin-bottom-right"
         >
-          <motion.img src={img1} alt="" />
+          <motion.img src={img1} alt="team picture" />
         </motion.div>
       </motion.div>
     </motion.div>

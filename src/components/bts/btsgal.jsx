@@ -1,20 +1,32 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import img1 from "../../assets/img1.jpg";
-import Button from "../shared/button";
+import bts1 from "../../assets/imgs/galimg (1).webp";
+import bts2 from "../../assets/imgs/galimg (1).webp";
+import bts3 from "../../assets/imgs/galimg (1).webp";
+import bts4 from "../../assets/imgs/galimg (1).webp";
 
 // imgs
 const images = [
-  { src: img1, title: "Concert Night" },
-  { src: img1, title: "Backstage Moments" },
-  { src: img1, title: "Crowd Enthusiasm" },
-  { src: img1, title: "Stage Lights" },
-  { src: img1, title: "Artist Close-up" },
-  { src: img1, title: "Concert Night" },
-  { src: img1, title: "Backstage Moments" },
-  { src: img1, title: "Crowd Enthusiasm" },
-  { src: img1, title: "Stage Lights" },
-  { src: img1, title: "Artist Close-up" },
+  {
+    src: bts1,
+    title: "Concert Night",
+    alt: "Behind the scenes of a concert at night",
+  },
+  {
+    src: bts2,
+    title: "On stage Moments",
+    alt: "Candid moments of performers on stage",
+  },
+  {
+    src: bts3,
+    title: "Equipment",
+    alt: "Close-up of music and photography equipment",
+  },
+  {
+    src: bts4,
+    title: "Stage Through Camera",
+    alt: "View of the stage through a camera lens",
+  },
 ];
 
 const BTSGal = () => {
@@ -83,7 +95,7 @@ const BTSGal = () => {
               >
                 <img
                   src={image.src}
-                  alt={image.title}
+                  alt={image.alt}
                   className="w-full h-auto object-cover pointer-events-none"
                 />
                 <p className="mt-2 text-white text-base">{image.title}</p>

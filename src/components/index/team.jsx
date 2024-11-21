@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
-import img2 from "../../assets/imgs/galimg (9).jpeg";
+import img2 from "../../assets/imgs/galimg (8).webp";
 import Button from "../shared/button";
 
 export function Team() {
@@ -51,14 +51,14 @@ export function Team() {
             <div className="text-white-smoke text-6xl leading-none ">
               &quot;
             </div>
-            <p className="text-base text-zinc-500">James Hans</p>
+            <p className="text-base text-zinc-500">Katie</p>
             <p className="text-sm text-amethyst">Co-Director</p>
           </motion.div>
           <motion.p
             className="md:font-semibold leading-snug mb-2"
             variants={itemVariants}
           >
-            Experience the raw energy and nostalgia of concert photography
+            Experience the raw energy and nostalgia of Music Through The Lens
             through the lens of analog film. Our short film takes you behind the
             scenes with passionate photographers as they document live music
             performances using nothing but 35mm cameras and their artistic
@@ -70,7 +70,7 @@ export function Team() {
         </motion.div>
 
         <motion.div variants={itemVariants} className="h-full  basis-1/3">
-          <img src={img2} alt="" className="" />
+          <img src={img2} alt="team member" className="" />
         </motion.div>
       </div>
     </motion.div>

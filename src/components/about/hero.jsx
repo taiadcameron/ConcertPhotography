@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Button from "../shared/button";
-import img2 from "../../assets/img1.jpg";
+import img2 from "../../assets/imgs/galimg (12).webp";
 import { motion, useScroll, useTransform } from "framer-motion";
 function Hero() {
   const { scrollY } = useScroll();
@@ -42,10 +42,12 @@ function Hero() {
             About
           </motion.span>{" "}
           <br />
-          <motion.span variants={textVariants}>Concert Photography</motion.span>
+          <motion.span variants={textVariants}>
+            Music Through The Lens
+          </motion.span>
         </motion.h1>
         <motion.p className="text-base text-amethyst" variants={textVariants}>
-          Featuring Summer
+          Four Frames Films
         </motion.p>
       </motion.div>
       <motion.div
@@ -87,7 +89,7 @@ function Hero() {
         <motion.div className="inset-0" style={{ y }}>
           <motion.img
             src={img2}
-            alt=""
+            alt="singer on stage at an event"
             className="w-full h-full object-cover"
             whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
           />

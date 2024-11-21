@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/imgs/logo.webp";
 
 const navLinks = [
   { title: "Home", href: "/" },
@@ -162,14 +162,21 @@ const Nav = () => {
                   <X size={32} />
                 </motion.div>
               </motion.div>
-              <motion.p
+              <motion.img
                 initial={{ opacity: 0, y: 0, scale: 0.8 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ delay: 0.5 }}
                 className="text-night"
+                src=""
+              />
+              <motion.a
+                href="/"
+                initial={{ opacity: 0, y: 0, scale: 0.8 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ delay: 0.5 }}
               >
-                Concert Photography
-              </motion.p>
+                <img src={logo} alt="logo" className="h-16" />
+              </motion.a>
             </div>
             <motion.div
               variants={containerVar}

@@ -41,8 +41,10 @@ function Footer() {
         ))}
       </ul>
       <div className="flex w-full text-xs justify-between">
-        <p className="text-zinc-400 text-xs">Privacy Policy</p>
-        <p className="text-zinc-400 text-xs">CONCERT PHOTOGRAPHY</p>
+        <a href="privacy-policy">
+          <p className="text-zinc-400 text-xs">Privacy Policy</p>
+        </a>
+        <p className="text-zinc-400 text-xs">Created By TADC</p>
       </div>
     </footer>
   );

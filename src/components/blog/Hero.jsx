@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
-import img1 from "../../assets/imgs/galimg (5).jpeg";
-import img2 from "../../assets/imgs/galimg (11).jpeg";
-import img3 from "../../assets/imgs/galimg (6).jpeg";
+import img1 from "../../assets/imgs/galimg (5).webp";
+import img2 from "../../assets/imgs/galimg (11).webp";
+import img3 from "../../assets/imgs/galimg (6).webp";
 
 export function Hero() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const API_URL = process.env.API_URL || "http://localhost:3000";
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
   const NewsletterSubmit = (e) => {
     e.preventDefault();
@@ -106,59 +106,27 @@ export function Hero() {
       </div>
 
       <div className="flex flex-col md:flex-row items-center gap-8 w-full justify-between mb-24">
-        <a href="Article1">
+        <a href="5-Essential-Concert-Photography-Tips-for-Aspiring-Music-Photographers">
           <motion.div
             className="flex flex-col border-2 border-night max-w-96 p-2 gap-4"
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <div className="border-2 border-night p-2">
-              <img src={img2} alt="" />
+              <img src={img2} alt="drummer" />
             </div>
             <div className="border-2 border-night p-2">
-              <h6 className="text-night font-bold">Lorem ipsum dolor </h6>
-              <p className="text-night text-sm border-1">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Perspiciatis, aperiam quisquam nam voluptate o
+              <h6 className="text-night font-bold">
+                5 Essential Concert Photography Tips for Aspiring Music
+                Photographers
+              </h6>
+              <p className="text-night text-sm border-1 mt-2">
+                Dive into the world of concert photography with these 10 crucial
+                tips. Learn how to capture stunning live music shots and start
+                your journey as a music photographer
               </p>
             </div>
           </motion.div>
-        </a>
-        <a href="Article1">
-          <motion.div
-            className="flex flex-col border-2 border-night max-w-96 p-2 gap-4"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <div className="border-2 border-night p-2">
-              <img src={img3} alt="CHANGE" />
-            </div>
-            <div className="border-2 border-night p-2">
-              <h6 className="text-night font-bold">Lorem ipsum dolor </h6>
-              <p className="text-night text-sm border-1">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Perspiciatis, aperiam quisquam nam voluptate o
-              </p>
-            </div>
-          </motion.div>
-        </a>
-        <a href="Article1">
-          <motion.div
-            className="flex flex-col border-2 border-night max-w-96 p-2 gap-4"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <div className="border-2 border-night p-2">
-              <img src={img1} alt="" />
-            </div>
-            <div className="border-2 border-night p-2">
-              <h6 className="text-night font-bold">Lorem ipsum dolor </h6>
-              <p className="text-night text-sm border-1">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Perspiciatis, aperiam quisquam nam voluptate o
-              </p>
-            </div>
-          </motion.div>{" "}
         </a>
       </div>
     </div>

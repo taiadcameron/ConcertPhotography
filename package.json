@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "start": "node server.js",
-    "dev": "vite nodemon server.js",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:frontend": "vite",
+    "dev:backend": "nodemon server.js",
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\""
   },
   "proxy": "http://localhost:5000/",
   "dependencies": {
@@ -26,7 +28,11 @@
     "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-intersection-observer": "^9.13.1",
+    "react-lazy-load": "^4.0.1",
+    "react-player": "^2.16.0",
     "react-router-dom": "^6.27.0",
     "react-scroll-parallax": "^3.4.5"
   },
@@ -36,6 +42,7 @@
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.2",
     "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
     "eslint": "^9.11.1",
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
@@ -43,7 +50,7 @@
     "globals": "^15.9.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
-    "vite": "^5.4.8"
+    "vite": "^5.4.11"
   },
   "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
   "main": "eslint.config.js",

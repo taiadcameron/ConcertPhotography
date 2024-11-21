@@ -1,12 +1,61 @@
 import { motion } from "framer-motion";
-import img1 from "../../assets/img1.jpg";
+import img1 from "../../assets/imgs/galimg (1).webp";
 import Nav from "../../components/shared/nav";
 import Footer from "../../components/shared/footer";
+import axios from "axios";
+import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
+
 const BlogPost = () => {
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+
+  const NewsletterSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post(`${API_URL}/createNLEmail`, { name, email })
+      .then((response) => {
+        console.log(response.data);
+        setName("");
+        setEmail("");
+      })
+      .catch((err) => console.log(err));
+  };
   return (
     <>
-      <Nav />
+      <Helmet>
+        <title>
+          5 Essential Concert Photography Tips for Aspiring Music Photographers
+        </title>
+        <meta
+          name="description"
+          content="Dive into the world of concert photography with these 5 crucial tips. Learn how to capture stunning live music shots and start your journey as a music photographer."
+        />
+        <meta
+          name="keywords"
+          content="concert photography, music photographer, live music photography, photography tips, low-light photography"
+        />
+        <meta
+          property="og:title"
+          content="5 Essential Concert Photography Tips for Aspiring Music Photographers"
+        />
+        <meta
+          property="og:description"
+          content="Learn how to capture stunning live music shots with these essential concert photography tips."
+        />
+        <meta property="og:type" content="article" />
+        <meta
+          property="og:url"
+          content="https://music-through-the-lens.onrender.com/blog/concert-photography-tips"
+        />
+        <link
+          rel="canonical"
+          href="https://music-through-the-lens.onrender.com/blog/concert-photography-tips"
+        />
+      </Helmet>
       <main>
+        <Nav />
         <motion.div
           initial="initial"
           animate="in"
@@ -19,13 +68,16 @@ const BlogPost = () => {
         >
           <div className="mx-auto px-4 max-w-3xl">
             <header className="mb-4">
-              <h1 className=" mb-4 text-night leading-snug">Blog Title</h1>
+              <h1 className=" mb-4 text-night leading-snug text-3xl lg:text-5xl">
+                5 Essential Concert Photography Tips for Aspiring Music
+                Photographers
+              </h1>
               <div className="flex items-center text-sm gap-2  ">
-                <p className="text-night text-base">By Author Name</p>
+                <p className="text-night text-base">By Automan</p>
                 <p className="text-night text-base">|</p>
-                <p className="text-night text-base">day/month/year</p>
+                <p className="text-night text-base">11/1/24</p>
                 <p className="text-night text-base">|</p>
-                <p className="text-night text-base">5 Min Read</p>
+                <p className="text-night text-base">3 Min Read</p>
               </div>
             </header>
 
@@ -36,104 +88,105 @@ const BlogPost = () => {
             />
 
             <article className="   text-night">
-              <h2 className="text-night">First Section Header</h2>
+              <h2 className="text-night">Master Low-Light Photography</h2>
               <p className="text-night mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                in dui mauris. Vivamus hendrerit arcu sed erat molestie
-                vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh
-                porttitor. Ut in nulla enim. Phasellus molestie magna non est
-                bibendum non venenatis nisl tempor. Suspendisse dictum feugiat
-                nisl ut dapibus.
+                Concert venues are often dimly lit, making low-light photography
+                skills crucial. Here are some key points: <br />
+                Use a fast lens (f/2.8 or wider) to allow more light <br />
+                Increase your ISO (start around 1600-3200) Experiment with
+                slower shutter speeds (1/125 or 1/250) <br />
+                Remember, embracing the darkness can lead to moody, atmospheric
+                shots that capture the essence of live performances.
               </p>
 
-              <h2 className="text-night">Second Section Header</h2>
+              <h2 className="text-night"> Understand Your Camera Settings</h2>
               <p className="text-night mb-8">
-                Maecenas faucibus mollis interdum. Donec sed odio dui. Cras
-                justo odio, dapibus ac facilisis in, egestas eget quam.
-                Vestibulum id ligula porta felis euismod semper. Donec id elit
-                non mi porta gravida at eget metus. Vestibulum id ligula porta
-                felis euismod semper.
+                Familiarize yourself with your camera's manual settings. In the
+                fast-paced environment of a concert, you need to adjust quickly.
+                Practice changing settings without looking at your camera.
               </p>
 
-              <h2 className="text-night">Third Section Header</h2>
+              <h2 className="text-night">Choose the Right Gear</h2>
               <p className="text-night mb-8">
-                Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare
-                sem lacinia quam venenatis vestibulum. Sed posuere consectetur
-                est at lobortis. Cras mattis consectetur purus sit amet
-                fermentum.
+                While gear isn't everything, having the right equipment can make
+                a difference: <br />
+                A full-frame camera for better low-light performance <br />
+                Fast zoom lenses (24-70mm f/2.8 and 70-200mm f/2.8 are popular
+                choices) <br />
+                Extra batteries and memory cards
               </p>
 
-              <h3 className="text-night">Subsection Header</h3>
-              <p className="text-night mb-8">
-                Nullam quis risus eget urna mollis ornare vel eu leo. Cras
-                mattis consectetur purus sit amet fermentum. Duis mollis, est
-                non commodo luctus, nisi erat porttitor ligula, eget lacinia
-                odio sem nec elit. Vivamus sagittis lacus vel augue laoreet
-                rutrum faucibus dolor auctor.
+              <h2 className="text-night">Learn Concert Etiquette</h2>
+              <p className="text-night mb-8 ">
+                Respect the artists, other photographers, and the audience. Some
+                tips: <br />
+                Don't use flash unless explicitly permitted <br />
+                Stay low and avoid blocking the audience's view <br />
+                Be mindful of your movements, especially in small venues
+              </p>
+
+              <h2 className="text-night">Research the Venue and Artist</h2>
+              <p className="text-night mb-8 ">
+                Knowing the venue layout and the artist's performance style can
+                help you anticipate great photo opportunities. Study previous
+                concert photos from the venue and watch live videos of the
+                artist.
               </p>
 
               <h2 className="text-night">Conclusion</h2>
               <p className="text-night mb-8 ">
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-                Donec id elit non mi porta gravida at eget metus. Nullam id
-                dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque
-                penatibus et magnis dis parturient montes, nascetur ridiculus
-                mus.
+                Becoming a successful concert photographer takes practice,
+                patience, and passion. By following these tips and continuously
+                honing your skills, you'll be well on your way to capturing
+                stunning live music moments. Remember, every great music
+                photographer started as a beginner. Keep shooting, stay
+                inspired, and let your unique vision shine through your work.
               </p>
             </article>
 
             <div className="mt-12 pt-8 border-t border-night">
-              <h3 className="text-xl font-semibold mb-4 text-night">
-                Related Posts
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <a href="Article1">
-                  <motion.div
-                    className="flex flex-col border-2 border-night max-w-96 p-2 gap-4"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <div className="border-2 border-night p-2">
-                      <img src={img1} alt="" />
-                    </div>
-                    <div className="border-2 border-night p-2">
-                      <h6 className="text-night font-bold">
-                        Lorem ipsum dolor{" "}
-                      </h6>
-                      <p className="text-night text-sm border-1">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Perspiciatis, aperiam quisquam nam voluptate o
-                      </p>
-                    </div>
-                  </motion.div>
-                </a>
-                <a href="Article1">
-                  <motion.div
-                    className="flex flex-col border-2 border-night max-w-96 p-2 gap-4"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <div className="border-2 border-night p-2">
-                      <img src={img1} alt="" />
-                    </div>
-                    <div className="border-2 border-night p-2">
-                      <h6 className="text-night font-bold">
-                        Lorem ipsum dolor{" "}
-                      </h6>
-                      <p className="text-night text-sm border-1">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Perspiciatis, aperiam quisquam nam voluptate o
-                      </p>
-                    </div>
-                  </motion.div>
-                </a>
-              </div>
+              <p className="text-night text-lg mb-2">
+                Sign up to our newsletter and get exclusive Behind The Scenes
+                content and updated screening locations and timings.
+              </p>
+              <form
+                name="newsletter-form"
+                onSubmit={NewsletterSubmit}
+                className="flex flex-col gap-2"
+              >
+                <motion.input
+                  whileFocus={{ scale: 1.02 }}
+                  type="text"
+                  name="newsletter-Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Name"
+                  className="px-4 py-2 border-2 border-night focus:border-amethyst focus:outline-none transition-colors duration-200"
+                  required
+                />
+                <motion.input
+                  whileFocus={{ scale: 1.02 }}
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Your Email"
+                  className="px-4 py-2 border-2 border-night focus:border-amethyst focus:outline-none transition-colors duration-200"
+                  required
+                />
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  type="submit"
+                  className="bg-night text-white px-6 py-2 hover:bg-amethyst transition-colors duration-200"
+                >
+                  Sign Up
+                </motion.button>
+              </form>
             </div>
           </div>
         </motion.div>
+        <Footer />{" "}
       </main>
-      <Footer />
     </>
   );
 };

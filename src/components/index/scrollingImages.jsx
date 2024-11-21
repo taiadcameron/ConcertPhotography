@@ -2,10 +2,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import scrollImg1 from "../../assets/imgs/scrollImg1.jpeg";
-import scrollImg2 from "../../assets/imgs/scrollImg2.jpeg";
-import scrollImg3 from "../../assets/imgs/scrollImg3.jpeg";
-import scrollImg4 from "../../assets/imgs/scrollImg4.jpeg";
+import scrollImg1 from "../../assets/imgs/scrollImg1.webp";
+import scrollImg2 from "../../assets/imgs/scrollImg1.webp";
+import scrollImg3 from "../../assets/imgs/scrollImg1.webp";
+import scrollImg4 from "../../assets/imgs/scrollImg1.webp";
 
 // img array and angles
 const images = [scrollImg1, scrollImg2, scrollImg3, scrollImg4];
