@@ -2,36 +2,11 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import aboutImg from "../../assets/imgs/aboutimg.webp";
 import Button from "../shared/button";
+import { itemVariants, containerVariants } from "../../animations/varients";
 
 function About() {
-  //animations
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.4,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 75 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        damping: 12,
-        stiffness: 50,
-        duration: 0.8,
-      },
-    },
-  };
 
   return (
     <div className="w-full flex justify-center px-4">
@@ -58,7 +33,7 @@ function About() {
             className="row-start-2 md:row-span-2 p-3 pl-0 md:row-start-2 border-t border-l md:border-l-0 "
             variants={itemVariants}
           >
-            <img src={aboutImg} alt="artist on stage" />
+            <img loading="lazy" src={aboutImg} alt="artist on stage" />
           </motion.div>
           <motion.div
             className="border-b border-l row-start-4 col-span-4 md:col-span-2 md:row-span-1 md:row-start-2"

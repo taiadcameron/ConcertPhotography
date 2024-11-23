@@ -2,37 +2,11 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import img2 from "../../assets/imgs/galimg (8).webp";
 import Button from "../shared/button";
+import { itemVariants, containerVariants } from "../../animations/varients";
 
 export function Team() {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
-
-  //animations
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.4,
-        delayChildren: 0.3,
-        duration: 1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 75 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        damping: 10,
-        stiffness: 40,
-        duration: 1.2,
-      },
-    },
-  };
 
   return (
     <motion.div
@@ -70,7 +44,7 @@ export function Team() {
         </motion.div>
 
         <motion.div variants={itemVariants} className="h-full  basis-1/3">
-          <img src={img2} alt="team member" className="" />
+          <img loading="lazy" src={img2} alt="team member" className="" />
         </motion.div>
       </div>
     </motion.div>

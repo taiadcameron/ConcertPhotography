@@ -40,6 +40,7 @@ const ImageComponent = ({ src, index, totalImages }) => {
       className="absolute top-1/4 transform -translate-x-1/2 w-[80%] sm:w-2/3 max-w-lg aspect-[4/4] flex items-center justify-center origin-bottom"
     >
       <img
+        loading="lazy"
         src={src}
         alt={index + 1}
         className="w-full h-full object-cover rounded-lg shadow-lg"

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import heroImg from "../../assets/imgs/trailerimg.webp";
 import triangle from "../../assets/imgs/triangle.svg";
+import { itemVariants, containerVariants } from "../../animations/varients";
 
 function Hero() {
   const controls = useAnimation();
@@ -10,28 +11,6 @@ function Hero() {
   useEffect(() => {
     controls.start("visible");
   }, [controls]);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-      },
-    },
-  };
 
   const underlineVariants = {
     hidden: { width: "0%" },
@@ -65,7 +44,13 @@ function Hero() {
           className="border-white-smoke border-2 p-4 relative"
           variants={itemVariants}
         >
-          <img src={heroImg} alt="Artist on stage performing" className="" />
+          <img
+            fetchpriority="high"
+            loading="lazy"
+            src={heroImg}
+            alt="Artist on stage performing"
+            className=""
+          />
           <motion.div className="absolute inset-0 flex items-center justify-center">
             <motion.div
               className=" px-6 py-3 cursor-pointer"

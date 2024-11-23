@@ -1,22 +1,12 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import img1 from "../../assets/imgs/galimg (5).webp";
+import img1 from "../../assets/imgs/galimg (8).webp";
+import { containerVariants } from "../../animations/varients";
 
 export function Hero() {
   const { scrollYProgress } = useScroll();
 
   const scale = useTransform(scrollYProgress, [0, 0.1], [1, 1.5]);
   const y = useTransform(scrollYProgress, [0, 0.1], [0, -50]);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
 
   return (
     <motion.div

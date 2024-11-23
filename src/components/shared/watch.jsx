@@ -2,36 +2,11 @@ import React from "react";
 import { motion, useInView } from "framer-motion";
 import watchImg from "../../assets/imgs/watchImg.webp";
 import Button from "../shared/button";
+import { itemVariants, containerVariants } from "../../animations/varients";
 
 function Watch() {
   const ref = React.useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.4,
-        delayChildren: 0.3,
-        duration: 1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 75 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        damping: 10,
-        stiffness: 40,
-        duration: 1.2,
-      },
-    },
-  };
 
   return (
     <motion.div
@@ -45,11 +20,7 @@ function Watch() {
         className="basis-2/3  flex flex-col gap-2"
         variants={itemVariants}
       >
-        <motion.img
-          src={watchImg}
-          alt="singer on stage preforming"
-          variants={itemVariants}
-        />
+        <img loading="lazy" src={watchImg} alt="singer on stage preforming" />
       </motion.div>
 
       <motion.div
