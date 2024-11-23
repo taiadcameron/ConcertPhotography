@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import Button from "../../components/shared/button";
-import galImg from "../../assets/imgs/galimg (1).webp";
-import img1 from "../../assets/imgs/galimg (1).webp";
+import galImg from "../../assets/imgs/galimg (3).webp";
+import img1 from "../../assets/imgs/galimg (5).webp";
 
 function Extra() {
   return (

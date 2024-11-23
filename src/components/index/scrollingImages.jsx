@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 import scrollImg1 from "../../assets/imgs/scrollImg1.webp";
-import scrollImg2 from "../../assets/imgs/scrollImg1.webp";
-import scrollImg3 from "../../assets/imgs/scrollImg1.webp";
-import scrollImg4 from "../../assets/imgs/scrollImg1.webp";
+import scrollImg2 from "../../assets/imgs/scrollImg2.webp";
+import scrollImg3 from "../../assets/imgs/scrollImg3.webp";
+import scrollImg4 from "../../assets/imgs/scrollImg4.webp";
 
 // img array and angles
 const images = [scrollImg1, scrollImg2, scrollImg3, scrollImg4];

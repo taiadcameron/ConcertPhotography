@@ -112,7 +112,7 @@ const Nav = () => {
   return (
     <header>
       <motion.nav
-        className="navbar fixed flex justify-between items-center z-10 w-full px-5 md:px-12 border-b border-b-zinc-500 bg-night py-2"
+        className="navbar fixed flex justify-between items-center h-16 z-10 w-full px-5 md:px-12 border-b border-b-zinc-500 bg-night py-2"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -120,7 +120,7 @@ const Nav = () => {
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="h-fit"
+          className="h-fit "
         >
           <Menu
             color="white"
@@ -129,12 +129,12 @@ const Nav = () => {
             className="cursor-pointer"
           />
         </motion.div>
+        <p className="font-semibold">MUSIC THROUGH THE LENSE</p>
         <div className="flex items-center gap-4">
           {" "}
-          <p className="text-lg cursor-pointer">Watch Now</p>
-          <a href="/">
-            <img src={logo} alt="logo" className="h-16" />
-          </a>
+          <button className="border-white-smoke border px-4 py-2 text-white-smoke hover:bg-purple-900">
+            Watch Now
+          </button>{" "}
         </div>
       </motion.nav>
       {"Nav menu"}
@@ -175,7 +175,9 @@ const Nav = () => {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                <img src={logo} alt="logo" className="h-16" />
+                <p className="font-semibold text-night">
+                  MUSIC THROUGH THE LENSE
+                </p>
               </motion.a>
             </div>
             <motion.div

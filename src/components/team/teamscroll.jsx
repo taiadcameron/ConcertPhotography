@@ -6,7 +6,7 @@ import {
   AnimatePresence,
 } from "framer-motion";
 import img1 from "../../assets/imgs/galimg (1).webp";
-import img2 from "../../assets/imgs/galimg (1).webp";
+import img2 from "../../assets/imgs/galimg (2).webp";
 
 function TeamScroll() {
   const { scrollY } = useScroll();

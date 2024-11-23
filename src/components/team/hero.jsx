@@ -1,5 +1,5 @@
 import { motion, useTransform, useScroll } from "framer-motion";
-import img1 from "../../assets/imgs/galimg (1).webp";
+import img1 from "../../assets/imgs/scrollimg3.webp";
 
 export function Hero() {
   const { scrollYProgress } = useScroll();

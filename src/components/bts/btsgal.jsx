@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import bts1 from "../../assets/imgs/galimg (1).webp";
-import bts2 from "../../assets/imgs/galimg (1).webp";
-import bts3 from "../../assets/imgs/galimg (1).webp";
-import bts4 from "../../assets/imgs/galimg (1).webp";
+import bts1 from "../../assets/imgs/galimg (5).webp";
+import bts2 from "../../assets/imgs/galimg (6).webp";
+import bts3 from "../../assets/imgs/galimg (7).webp";
+import bts4 from "../../assets/imgs/galimg (4).webp";
 
 // imgs
 const images = [
