@@ -35,7 +35,7 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center mb-8">
+    <div className="min-h-screen flex items-center justify-center mb-8 px-5">
       <div className="CONTACT flex flex-col w-full max-w-screen-xl gap-8  rounded-lg">
         <div>
           <h2 className="font-semibold leading-none md:leading-none">
