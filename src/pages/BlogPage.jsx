@@ -29,7 +29,7 @@ const Blog = () => {
           property="og:url"
           content="https://music-through-the-lens.onrender.com/blog"
         />
-        <meta property="og:image" content="../assets/imgs/galimg (2).jpeg" />
+        <link rel="preload" as="image" href="../assets/imgs/trailerimg.webp" />
         <link
           rel="canonical"
           href="https://music-through-the-lens.onrender.com/blog"

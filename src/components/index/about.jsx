@@ -33,7 +33,12 @@ function About() {
             className="row-start-2 md:row-span-2 p-3 pl-0 md:row-start-2 border-t border-l md:border-l-0 "
             variants={itemVariants}
           >
-            <img loading="lazy" src={aboutImg} alt="artist on stage" />
+            <img
+              loading="lazy"
+              src={aboutImg}
+              alt="artist on stage"
+              className="w-full h-full"
+            />
           </motion.div>
           <motion.div
             className="border-b border-l row-start-4 col-span-4 md:col-span-2 md:row-span-1 md:row-start-2"

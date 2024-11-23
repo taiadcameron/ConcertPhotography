@@ -37,8 +37,12 @@ const Index = () => {
           property="og:url"
           content="https://music-through-the-lens.onrender.com"
         />
-        <meta property="og:image" content="../assets/imgs/galimg (2).jpeg" />
-
+        <meta property="og:image" content="../assets/imgs/galimg (2).webp" />
+        <link
+          rel="preload"
+          as="image"
+          href="/src/assets/imgs/trailerimg.webp"
+        />{" "}
         <link
           rel="canonical"
           href="https://music-through-the-lens.onrender.com"
@@ -50,7 +54,7 @@ const Index = () => {
         <Hero />
         <About />
         <Team />
-        <ScrollingImages />
+        {/* <ScrollingImages /> */}
         <Watch />
         <Contact />
       </main>{" "}

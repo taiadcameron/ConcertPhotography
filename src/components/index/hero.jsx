@@ -46,7 +46,6 @@ function Hero() {
         >
           <img
             fetchpriority="high"
-            loading="lazy"
             src={heroImg}
             alt="Artist on stage performing"
             className=""
@@ -70,6 +69,7 @@ function Hero() {
             </motion.div>
           </motion.div>
         </motion.div>
+
         <motion.div variants={itemVariants}>
           <motion.p
             className="w-full flex justify-end text-sm text-zinc-500"

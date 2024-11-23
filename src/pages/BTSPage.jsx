@@ -30,7 +30,7 @@ const BTS = () => {
           property="og:url"
           content="https://music-through-the-lens.onrender.com/bts"
         />
-        <meta property="og:image" content="../assets/imgs/galimg (2).jpeg" />
+        <link rel="preload" as="image" href="../assets/imgs/trailerimg.webp" />
         <link
           rel="canonical"
           href="https://music-through-the-lens.onrender.com/bts"

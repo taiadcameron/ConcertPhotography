@@ -44,7 +44,12 @@ export function Team() {
         </motion.div>
 
         <motion.div variants={itemVariants} className="h-full  basis-1/3">
-          <img loading="lazy" src={img2} alt="team member" className="" />
+          <img
+            loading="lazy"
+            src={img2}
+            alt="team member"
+            className="w-full h-full"
+          />
         </motion.div>
       </div>
     </motion.div>
