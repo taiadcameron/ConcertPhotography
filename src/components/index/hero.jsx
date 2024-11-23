@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import heroImg from "../../assets/imgs/trailerimg.webp";
+import heroImg from "../../assets/imgs/galimg (5).webp";
 import triangle from "../../assets/imgs/triangle.svg";
 import { itemVariants, containerVariants } from "../../animations/varients";
 
@@ -48,7 +48,7 @@ function Hero() {
             fetchpriority="high"
             src={heroImg}
             alt="Artist on stage performing"
-            className=""
+            className="w-full h-full"
           />
           <motion.div className="absolute inset-0 flex items-center justify-center">
             <motion.div
