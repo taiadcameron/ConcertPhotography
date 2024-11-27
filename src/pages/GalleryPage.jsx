@@ -1,7 +1,7 @@
 import Picturegal from "../components/gallery/picturegal";
 import React, { lazy } from "react";
 
-import Nav from "../components/shared/Nav";
+import Nav from "../components/shared/nav";
 const Footer = lazy(() => import("../components/shared/footer"));
 import { Helmet } from "react-helmet-async";
 

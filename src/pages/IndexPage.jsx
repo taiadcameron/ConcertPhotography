@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet-async";
 
 import Hero from "../components/index/hero";
 import PopUp from "../components/index/popup";
-import Nav from "../components/shared/Nav";
+import Nav from "../components/shared/nav";
 
 const About = lazy(() => import("../components/index/about"));
 const Team = lazy(() => import("../components/index/team"));

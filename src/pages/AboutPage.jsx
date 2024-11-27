@@ -1,6 +1,6 @@
 import React, { lazy } from "react";
 import { Helmet } from "react-helmet-async";
-import Nav from "../components/shared/Nav";
+import Nav from "../components/shared/nav";
 const Footer = lazy(() => import("../components/shared/footer"));
 import Hero from "../components/about/hero";
 import Summer from "../components/about/summer";
