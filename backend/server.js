@@ -4,6 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import express from "express";
 import { createServer as createViteServer } from "vite";
+const compression = require("compression");
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

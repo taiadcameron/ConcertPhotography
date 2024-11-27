@@ -1,34 +1,38 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Index from "@/pages/IndexPage";
-import About from "@/pages/AboutPage";
-import Team from "@/pages/TeamPage";
-import Contact from "@/pages/ContactPage";
-import Gallery from "@/pages/GalleryPage";
-import BTS from "@/pages/BTSPage";
-import PrivacyPolicy from "@/pages/PrivacyPolicy";
-import Blog from "@/pages/BlogPage";
+import React, { lazy, Suspense } from "react";
 
-import Article1 from "@/pages/BlogArticles/A1";
+const Index = lazy(() => import("@/pages/IndexPage"));
+const About = lazy(() => import("@/pages/AboutPage"));
+const Team = lazy(() => import("@/pages/TeamPage"));
+const Contact = lazy(() => import("@/pages/ContactPage"));
+const Gallery = lazy(() => import("@/pages/GalleryPage"));
+const BTS = lazy(() => import("@/pages/BTSPage"));
+const PrivacyPolicy = lazy(() => import("@/pages/PrivacyPolicy"));
+const Blog = lazy(() => import("@/pages/BlogPage"));
+
+const Article1 = lazy(() => import("@/pages/BlogArticles/A1"));
 import ScrollToTop from "./components/shared/scrollTop";
 
 function App() {
   return (
     <Router>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/Behind-The-Scenes" element={<BTS />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route
-          path="/5-Essential-Concert-Photography-Tips-for-Aspiring-Music-Photographers"
-          element={<Article1 />}
-        />
-        <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
-      </Routes>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/team" element={<Team />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/Behind-The-Scenes" element={<BTS />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route
+            path="/5-Essential-Concert-Photography-Tips-for-Aspiring-Music-Photographers"
+            element={<Article1 />}
+          />
+          <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 }

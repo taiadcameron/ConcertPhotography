@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import img1 from "../../assets/imgs/galimg (1).webp";
-import Nav from "../../components/shared/nav";
-import Footer from "../../components/shared/footer";
+const Nav = lazy(() => import("../../components/shared/Nav"));
+const Footer = lazy(() => import("../../components/shared/footer"));
 import axios from "axios";
 import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";

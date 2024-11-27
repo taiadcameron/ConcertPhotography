@@ -1,21 +1,26 @@
 /* eslint-disable react/no-unescaped-entities */
-import Hero from "../components/index/hero";
-import Nav from "../components/shared/nav";
-import About from "../components/index/about";
-import Team from "../components/index/team";
-
-import Watch from "../components/shared/watch";
-import Contact from "../components/shared/contact";
-import Footer from "../components/shared/footer";
-import ScrollingImages from "../components/index/scrollingImages";
-import PopUp from "../components/index/popup";
+import React, { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
+
+import Hero from "../components/index/hero";
+import PopUp from "../components/index/popup";
+
+const About = lazy(() => import("../components/index/about"));
+const Team = lazy(() => import("../components/index/team"));
+const ScrollingImages = lazy(() =>
+  import("../components/index/scrollingImages")
+);
+const Watch = lazy(() => import("../components/shared/watch"));
+const Contact = lazy(() => import("../components/shared/contact"));
+const Nav = lazy(() => import("../components/shared/Nav"));
+const Footer = lazy(() => import("../components/shared/footer"));
 
 const Index = () => {
   return (
     <>
       <Helmet>
         <title>Music Through The Lens | Concert Photography Documentary</title>
+
         <meta
           name="description"
           content="Explore the world of concert photography through our documentary. Witness the passion, challenges, and artistry behind capturing live music performances."
@@ -38,27 +43,36 @@ const Index = () => {
           content="https://music-through-the-lens.onrender.com"
         />
         <meta property="og:image" content="../assets/imgs/galimg (2).webp" />
+
         <link
           rel="preload"
+          fetchpriority="high"
           as="image"
           href="/src/assets/imgs/trailerimg.webp"
-        />{" "}
+          type="image/webp"
+        />
+
         <link
           rel="canonical"
           href="https://music-through-the-lens.onrender.com"
         />
-      </Helmet>{" "}
+      </Helmet>
       <Nav />
       <main>
         <PopUp />
         <Hero />
         <About />
+
         <Team />
+
         <ScrollingImages />
+
         <Watch />
+
         <Contact />
-      </main>{" "}
-      <Footer />{" "}
+      </main>
+
+      <Footer />
     </>
   );
 };

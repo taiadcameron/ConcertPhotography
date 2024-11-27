@@ -1,6 +1,6 @@
-import Nav from "../components/shared/nav";
-import Footer from "../components/shared/footer";
-import Contact from "../components/shared/contact";
+const Nav = lazy(() => import("../components/shared/Nav"));
+const Footer = lazy(() => import("../components/shared/footer"));
+const Contact = lazy(() => import("../components/shared/contact"));
 import { Helmet } from "react-helmet-async";
 
 import Hero from "../components/team/hero";

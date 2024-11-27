@@ -1,12 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import Nav from "../components/shared/nav";
-import Footer from "../components/shared/footer";
+const Nav = lazy(() => import("../components/shared/Nav"));
+const Footer = lazy(() => import("../components/shared/footer"));
 import Hero from "../components/about/hero";
 import Summer from "../components/about/summer";
 import Extra from "../components/about/extra";
-import Watch from "../components/shared/watch";
-import Contact from "../components/shared/contact";
+const Watch = lazy(() => import("../components/shared/watch"));
+const Contact = lazy(() => import("../components/shared/contact"));
 import Quote from "../components/about/quote";
 import { ParallaxProvider } from "react-scroll-parallax";
 

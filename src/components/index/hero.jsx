@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import heroImg from "../../assets/imgs/galimg (5).webp";
+import heroImg from "../../assets/imgs/trailerimg.webp";
 import triangle from "../../assets/imgs/triangle.svg";
 import { itemVariants, containerVariants } from "../../animations/varients";
 
@@ -44,11 +44,15 @@ function Hero() {
           className="border-white-smoke border-2 p-4 relative"
           variants={itemVariants}
         >
+          {/* Eager loading for LCP image */}
           <img
             fetchpriority="high"
             src={heroImg}
             alt="Artist on stage performing"
-            className="w-full h-full"
+            className="w-full h-full object-cover rounded-lg shadow-lg"
+            // srcSet="/src/assets/imgs/trailerimg-400px.webp 400w, /src/assets/imgs/trailerimg-800px.webp 800w, /src/assets/imgs/trailerimg-1200px.webp 1200w"
+            // sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1200px"
+            loading="eager" // Ensure eager loading for LCP image
           />
           <motion.div className="absolute inset-0 flex items-center justify-center">
             <motion.div
