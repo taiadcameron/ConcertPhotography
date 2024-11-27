@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 
 import Hero from "../components/index/hero";
 import PopUp from "../components/index/popup";
+import Nav from "../components/shared/Nav";
 
 const About = lazy(() => import("../components/index/about"));
 const Team = lazy(() => import("../components/index/team"));
@@ -12,7 +13,6 @@ const ScrollingImages = lazy(() =>
 );
 const Watch = lazy(() => import("../components/shared/watch"));
 const Contact = lazy(() => import("../components/shared/contact"));
-const Nav = lazy(() => import("../components/shared/Nav"));
 const Footer = lazy(() => import("../components/shared/footer"));
 
 const Index = () => {
