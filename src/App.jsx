@@ -16,23 +16,21 @@ import ScrollToTop from "./components/shared/scrollTop";
 function App() {
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/Behind-The-Scenes" element={<BTS />} />
-          <Route path="/Blog" element={<Blog />} />
-          <Route
-            path="/5-Essential-Concert-Photography-Tips-for-Aspiring-Music-Photographers"
-            element={<Article1 />}
-          />
-          <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
-        </Routes>
-      </Suspense>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/Behind-The-Scenes" element={<BTS />} />
+        <Route path="/Blog" element={<Blog />} />
+        <Route
+          path="/5-Essential-Concert-Photography-Tips-for-Aspiring-Music-Photographers"
+          element={<Article1 />}
+        />
+        <Route path="/Privacy-Policy" element={<PrivacyPolicy />} />
+      </Routes>
     </Router>
   );
 }

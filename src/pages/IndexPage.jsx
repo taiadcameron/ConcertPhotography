@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import React, { lazy, Suspense } from "react";
+import React, { lazy } from "react";
 import { Helmet } from "react-helmet-async";
 
 import Hero from "../components/index/hero";

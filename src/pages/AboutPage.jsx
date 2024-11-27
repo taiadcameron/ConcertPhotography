@@ -1,4 +1,4 @@
-import React from "react";
+import React, { lazy } from "react";
 import { Helmet } from "react-helmet-async";
 const Nav = lazy(() => import("../components/shared/Nav"));
 const Footer = lazy(() => import("../components/shared/footer"));

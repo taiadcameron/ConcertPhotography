@@ -1,6 +1,7 @@
 const Nav = lazy(() => import("../components/shared/Nav"));
 const Footer = lazy(() => import("../components/shared/footer"));
 import { Helmet } from "react-helmet-async";
+import React, { lazy } from "react";
 
 const ContactForm = lazy(() => import("../components/shared/contact"));
 
