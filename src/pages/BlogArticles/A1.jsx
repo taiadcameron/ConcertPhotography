@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import img1 from "../../assets/imgs/galimg (1).webp";
-const Nav = lazy(() => import("../../components/shared/Nav"));
+import Nav from "../../components/shared/Nav";
 const Footer = lazy(() => import("../../components/shared/footer"));
 import axios from "axios";
 import React, { useState } from "react";

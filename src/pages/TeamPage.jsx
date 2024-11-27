@@ -4,7 +4,7 @@ import React, { lazy } from "react";
 import Hero from "../components/team/hero";
 import TeamScroll from "../components/team/teamscroll";
 
-const Nav = lazy(() => import("../components/shared/Nav"));
+import Nav from "../components/shared/Nav";
 const Footer = lazy(() => import("../components/shared/footer"));
 const Contact = lazy(() => import("../components/shared/contact"));
 

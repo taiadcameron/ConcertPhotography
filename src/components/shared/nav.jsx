@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "../../assets/imgs/logo.webp";
 
 const navLinks = [
   { title: "Home", href: "/" },
