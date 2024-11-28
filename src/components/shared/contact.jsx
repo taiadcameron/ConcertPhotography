@@ -2,8 +2,6 @@ import Button from "./button";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
-
 function Contact() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -12,7 +10,7 @@ function Contact() {
   const ContactSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${API_URL}/createMessage`, { name, email, mes })
+      .post("http://localhost:3000/createMessage", { name, email, mes })
       .then((response) => {
         console.log(response.data);
         setName("");
@@ -25,7 +23,7 @@ function Contact() {
   const NewsletterSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${API_URL}/createNLEmail`, { name, email })
+      .post("http://localhost:3000/createNLEmail", { name, email })
       .then((response) => {
         console.log(response.data);
         setName("");
@@ -35,7 +33,7 @@ function Contact() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center mb-8 px-5">
+    <div className="min-h-screen flex items-center justify-center mb-8">
       <div className="CONTACT flex flex-col w-full max-w-screen-xl gap-8  rounded-lg">
         <div>
           <h2 className="font-semibold leading-none md:leading-none">

@@ -1,10 +1,9 @@
-import Nav from "../components/shared/nav";
-const Footer = lazy(() => import("../components/shared/footer"));
 import React, { lazy } from "react";
 
 import { Helmet } from "react-helmet-async";
-
+import Nav from "../components/shared/nav";
 import BTSGal from "../components/bts/btsgal";
+const Footer = lazy(() => import("../components/shared/footer"));
 
 const BTS = () => {
   return (

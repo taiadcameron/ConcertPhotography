@@ -1,9 +1,8 @@
-import Nav from "../components/shared/nav";
-const Footer = lazy(() => import("../components/shared/footer"));
 import React, { lazy } from "react";
 
 import { Helmet } from "react-helmet-async";
-
+const Footer = lazy(() => import("../components/shared/footer"));
+import Nav from "../components/shared/nav";
 const PrivacyPolicy = () => {
   return (
     <>

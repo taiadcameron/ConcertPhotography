@@ -1,23 +1,34 @@
 const express = require("express");
+const helmet = require("helmet");
+const app = express();
+
 const ContactModel = require("./models/ContactModel");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const NewsletterModel = require("./models/NewsletterModel");
+require("dotenv").config();
+const { body, validationResult } = require("express-validator");
+app.use(helmet());
 
-const app = express();
+//DB DOESNT START ON NPM RUN DEV FIXXXXX
+//NOW IT WORKS JUST FOR THE NEWSLETTER FIXXXXX
+
 app.use(
   cors({
-    origin: import.meta.env.VITE_API_URL || "http://localhost:3000",
+    origin: "*",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 app.use(express.json());
 
-// MongoDB connection with error handling
+// MongoDB connection
+mongoose;
 mongoose
-  .connect(
-    "mongodb+srv://tadc936:jJDYkDkzQOAL0yrZ@websitedb.mgimf.mongodb.net/Forms?retryWrites=true&w=majority&appName=WebsiteDB",
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("Connected to DB"))
   .catch((err) => console.error("DB connection error:", err));
 
@@ -52,6 +63,6 @@ app.post("/createNLEmail", async (req, res) => {
 
 // Start the server
 const PORT = process.env.PORT || 3000;
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
