@@ -7,11 +7,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const NewsletterModel = require("./models/NewsletterModel");
 require("dotenv").config();
-const { body, validationResult } = require("express-validator");
 app.use(helmet());
-
-//DB DOESNT START ON NPM RUN DEV FIXXXXX
-//NOW IT WORKS JUST FOR THE NEWSLETTER FIXXXXX
 
 app.use(
   cors({
@@ -25,16 +21,12 @@ app.use(express.json());
 // MongoDB connection
 mongoose;
 mongoose
-  .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGODB_URI)
   .then(() => console.log("Connected to DB"))
   .catch((err) => console.error("DB connection error:", err));
-
 // Connection error handling
 mongoose.connection.on("error", (err) => {
-  console.error("MongoDB connection error:", err);
+  console.error("DB connection error:", err);
 });
 
 app.post("/createMessage", async (req, res) => {
