@@ -1,10 +1,10 @@
+import React, { useState, lazy } from "react";
 import { motion } from "framer-motion";
 import img1 from "../../assets/imgs/galimg (1).webp";
 import Nav from "../../components/shared/nav";
-const Footer = lazy(() => import("../../components/shared/footer"));
 import axios from "axios";
-import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
+const Footer = lazy(() => import("../../components/shared/footer"));
 
 const BlogPost = () => {
   const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
