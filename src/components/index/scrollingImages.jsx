@@ -45,7 +45,7 @@ const ImageComponent = ({ src, index, totalImages }) => {
         alt={index + 1}
         className="w-full h-full object-cover rounded-lg shadow-lg"
       />
-      {/* Adds a link to gallery for last image */}
+      {/*  link to gallery for last image */}
       {index === totalImages - 1 && (
         <Link
           to="/gallery"

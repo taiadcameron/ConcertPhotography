@@ -18,7 +18,6 @@ export function Hero() {
         console.log(response.data);
         setName("");
         setEmail("");
-        // Note: closePopup() is removed as it's not defined in this component
       })
       .catch((err) => console.log(err));
   };

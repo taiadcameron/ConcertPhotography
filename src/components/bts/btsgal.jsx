@@ -53,12 +53,12 @@ const BTSGal = () => {
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
-  // move to the next image
+  // next image
   const nextImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  // move to the previous image
+  // previous image
   const prevImage = () => {
     setCurrentIndex(
       (prevIndex) => (prevIndex - 1 + images.length) % images.length

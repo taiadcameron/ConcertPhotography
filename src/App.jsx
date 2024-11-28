@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import React, { lazy, Suspense } from "react";
+import React, { lazy } from "react";
 
 const Index = lazy(() => import("@/pages/IndexPage"));
 const About = lazy(() => import("@/pages/AboutPage"));
