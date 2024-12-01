@@ -6,6 +6,7 @@ const TimedPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
 
   const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
@@ -28,7 +29,8 @@ const TimedPopup = () => {
         console.log(response.data);
         setName("");
         setEmail("");
-        closePopup();
+        setNewsletterSubmitted(true);
+        setTimeout(() => setNewsletterSubmitted(false), 3000);
       })
       .catch((err) => console.log(err));
   };

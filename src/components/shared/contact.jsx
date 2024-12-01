@@ -5,9 +5,12 @@ import axios from "axios";
 function Contact() {
   const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [mes, setMes] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mes, setMes] = useState("");
+  const [contactSubmitted, setContactSubmitted] = useState(false);
+  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
+
   const ContactSubmit = (e) => {
     e.preventDefault();
     axios
@@ -17,6 +20,8 @@ function Contact() {
         setName("");
         setEmail("");
         setMes("");
+        setContactSubmitted(true);
+        setTimeout(() => setContactSubmitted(false), 3000);
       })
       .catch((err) => console.log(err));
   };
@@ -29,12 +34,14 @@ function Contact() {
         console.log(response.data);
         setName("");
         setEmail("");
+        setNewsletterSubmitted(true);
+        setTimeout(() => setNewsletterSubmitted(false), 3000);
       })
       .catch((err) => console.log(err));
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center mb-8">
+    <div className="min-h-screen flex  mt-8 justify-center mb-8">
       <div className="CONTACT flex flex-col w-full max-w-screen-xl gap-8  rounded-lg">
         <div>
           <h2 className="font-semibold leading-none md:leading-none">
@@ -50,6 +57,7 @@ function Contact() {
                 type="text"
                 id="name"
                 name="name"
+                value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Your Name"
                 className="text-white-smoke w-full p-2 bg-transparent border-b focus:outline-none focus:border-butterscotch"
@@ -61,6 +69,7 @@ function Contact() {
                 type="email"
                 id="email"
                 name="email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your Email"
                 className="text-white-smoke w-full p-2 bg-transparent border-b focus:outline-none focus:border-butterscotch"
@@ -71,6 +80,7 @@ function Contact() {
               <textarea
                 id="message"
                 name="message"
+                value={mes}
                 onChange={(e) => setMes(e.target.value)}
                 rows="4"
                 placeholder="Your Message"
@@ -81,6 +91,7 @@ function Contact() {
             <input
               className="border-white-smoke border w-full px-4 py-2 text-white-smoke hover:bg-purple-900"
               type="submit"
+              value={contactSubmitted ? "Message Sent!" : "Contact Us!"}
             />
           </form>
           <div className="md:w-1/2 flex flex-col gap-8">
@@ -98,6 +109,7 @@ function Contact() {
                   <input
                     type="text"
                     name="newsletter-Name"
+                    value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Name"
                     className="text-white-smoke w-full p-2 bg-transparent border border-white-smoke focus:outline-none focus:border-butterscotch mb-4"
@@ -106,6 +118,7 @@ function Contact() {
                   <input
                     type="email"
                     name="newsletter-email"
+                    value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Email"
                     className="text-white-smoke w-full p-2 bg-transparent border border-white-smoke focus:outline-none focus:border-butterscotch"
@@ -114,6 +127,7 @@ function Contact() {
                   <input
                     className="border-white-smoke border w-full px-4 py-2 text-white-smoke hover:bg-purple-900 mt-5"
                     type="submit"
+                    value={newsletterSubmitted ? "Subscribed!" : "Subscribe"}
                   />
                 </div>
               </form>
