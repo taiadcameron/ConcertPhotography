@@ -34,11 +34,11 @@ const About = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://music-through-the-lens.onrender.com/about"
+          content="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/about"
         />
         <link
           rel="canonical"
-          href="https://music-through-the-lens.onrender.com/about"
+          href="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/about"
         />
       </Helmet>{" "}
       <Nav />

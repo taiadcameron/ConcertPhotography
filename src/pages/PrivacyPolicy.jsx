@@ -27,11 +27,11 @@ const PrivacyPolicy = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://music-through-the-lens.onrender.com/privacy-policy"
+          content="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/privacy-policy"
         />
         <link
           rel="canonical"
-          href="https://music-through-the-lens.onrender.com/privacy-policy"
+          href="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/privacy-policy"
         />
       </Helmet>
       <Nav />

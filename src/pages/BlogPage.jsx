@@ -29,11 +29,11 @@ const Blog = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://music-through-the-lens.onrender.com/blog"
+          content="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/blog"
         />
         <link
           rel="canonical"
-          href="https://music-through-the-lens.onrender.com/blog"
+          href="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/blog"
         />
       </Helmet>{" "}
       <Nav />

@@ -29,13 +29,13 @@ const Gallery = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:url"
-          content="https://music-through-the-lens.onrender.com/gallery"
+          content="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/gallery"
         />
         <link rel="preload" as="image" href="../assets/imgs/trailerimg.webp" />
 
         <link
           rel="canonical"
-          href="https://music-through-the-lens.onrender.com/gallery"
+          href="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/gallery"
         />
       </Helmet>{" "}
       <Nav />

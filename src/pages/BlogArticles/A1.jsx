@@ -47,11 +47,11 @@ const BlogPost = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://music-through-the-lens.onrender.com/blog/concert-photography-tips"
+          content="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/blog/concert-photography-tips"
         />
         <link
           rel="canonical"
-          href="https://music-through-the-lens.onrender.com/blog/concert-photography-tips"
+          href="https://https://music-through-the-lens-taiadcamerons-projects.vercel.app/.com/blog/concert-photography-tips"
         />
       </Helmet>
       <main>
