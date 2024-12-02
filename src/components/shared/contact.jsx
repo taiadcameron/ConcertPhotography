@@ -11,6 +11,9 @@ function Contact() {
   const [contactSubmitted, setContactSubmitted] = useState(false);
   const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
 
+  const [newsName, setNewsName] = useState("");
+  const [newsEmail, setNewsEmail] = useState("");
+
   const ContactSubmit = (e) => {
     e.preventDefault();
     axios
@@ -29,11 +32,11 @@ function Contact() {
   const NewsletterSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(`${API_URL}/createNLEmail`, { name, email })
+      .post(`${API_URL}/createNLEmail`, { name: newsName, email: newsEmail })
       .then((response) => {
         console.log(response.data);
-        setName("");
-        setEmail("");
+        setNewsName("");
+        setNewsEmail("");
         setNewsletterSubmitted(true);
         setTimeout(() => setNewsletterSubmitted(false), 3000);
       })
@@ -109,8 +112,8 @@ function Contact() {
                   <input
                     type="text"
                     name="newsletter-Name"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    value={newsName}
+                    onChange={(e) => setNewsName(e.target.value)}
                     placeholder="Name"
                     className="text-white-smoke w-full p-2 bg-transparent border border-white-smoke focus:outline-none focus:border-butterscotch mb-4"
                     required
@@ -118,8 +121,8 @@ function Contact() {
                   <input
                     type="email"
                     name="newsletter-email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={newsEmail}
+                    onChange={(e) => setNewsEmail(e.target.value)}
                     placeholder="Email"
                     className="text-white-smoke w-full p-2 bg-transparent border border-white-smoke focus:outline-none focus:border-butterscotch"
                     required
